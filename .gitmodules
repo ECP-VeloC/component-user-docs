@@ -1,0 +1,24 @@
+[submodule "kvtree"]
+	path = kvtree
+	url = git@github.com:ecp-veloc/kvtree
+[submodule "axl"]
+	path = axl
+	url = git@github.com:ecp-veloc/axl
+[submodule "spath"]
+	path = spath
+	url = git@github.com:ecp-veloc/spath
+[submodule "filo"]
+	path = filo
+	url = git@github.com:ecp-veloc/filo
+[submodule "shuffile"]
+	path = shuffile
+	url = git@github.com:ecp-veloc/shuffile
+[submodule "redset"]
+	path = redset
+	url = git@github.com:ecp-veloc/redset
+[submodule "er"]
+	path = er
+	url = git@github.com:ecp-veloc/er
+[submodule "rankstr"]
+	path = rankstr
+	url = git@github.com:ecp-veloc/rankstr
