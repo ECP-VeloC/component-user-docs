@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
     <meta name="generator" content="Doxygen 1.8.15"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>ECP-VELOC Components: Encode/Rebuild (ER)</title>
+    <title>ECP-VELOC Components: Overview</title>
     <!-- <link href="tabs.css" rel="stylesheet" type="text/css"/> -->
     <!-- <script type="text/javascript" src="jquery.js"></script> -->
     <!-- <script type="text/javascript" src="dynsections.js"></script> -->
@@ -43,31 +43,28 @@
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Encode/Rebuild (ER) </div>  </div>
+<div class="title">Overview </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md32"></a>
-Overview</h1>
-<p>This module combines the funcitonality of shuffile and redset, which lets both migrate and rebuild files within an MPI job. It is useful for moving and rebuilding data files on distributed storage, e.g., node-local storage, particularly when MPI ranks may be running on different compute nodes than when they originally created their files.</p>
-<p>To encode, one defines a redundancy scheme and then applies the redundancy scheme to a list of files also providing a name for the encoded set. To rebuild, one specifies the name of the encoded set. Additionally, there is a function to remove the encoding information, which is needed when removing a dataset.</p>
-<p>Currently, er assumes the group of processes participating is the same as MPI_COMM_WORLD.</p>
-<p>Usage is documented in <a href="src/er.h">src/er.h</a>.</p>
-<h1><a class="anchor" id="autotoc_md33"></a>
+<div class="textblock"><p><a href="https://travis-ci.org/ECP-VeloC/redset"><img src="https://api.travis-ci.org/ECP-VeloC/redset.png?branch=master" alt="Build Status" class="inline"/>
+</a></p>
+<p>This module lets one create one or more redundancy descriptors, which then may be applied to a set of files distributed across a group of processes.</p>
+<p>Usage is documented in <a href="src/redset.h">src/redset.h</a> and <a href="doc/rst/redset.rst">doc/rst/redset.rst</a>. Also see the example program in the [test](test) directory.</p>
+<p>Implementation details can be found in <a href="doc/rst/implementation.rst">doc/rst/implementation.rst</a> and <a href="doc/rst/schemes.rst">doc/rst/schemes.rst</a>.</p>
+<h1><a class="anchor" id="autotoc_md29"></a>
 Building</h1>
-<p>To build dependencies: </p><pre class="fragment">git clone git@github.com:ECP-VeloC/KVTree.git   KVTree.git
-git clone git@github.com:ECP-VeloC/rankstr.git  rankstr.git
-git clone git@github.com:ECP-VeloC/redset.git   redset.git
-git clone git@github.com:ECP-VeloC/shuffile.git shuffile.git
+<p>To build dependencies: </p><pre class="fragment">git clone git@github.com:ECP-VeloC/KVTree.git  KVTree.git
+git clone git@github.com:ECP-VeloC/rankstr.git rankstr.git
 
 mkdir install
 
-rm -rf build
 mkdir build
 cd build
-cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=../install -DMPI=ON ../KVTree.git
+cmake -DCMAKE_INSTALL_PREFIX=../install -DMPI=ON ../KVTree.git
 make clean
 make
 make install
+make test
 cd ..
 
 rm -rf build
@@ -78,31 +75,14 @@ make clean
 make
 make install
 cd ..
-
-rm -rf build
-mkdir build
-cd build
-cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=../install -DMPI=ON ../redset.git
-make clean
+</pre><p>To build redset: </p><pre class="fragment">cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=./install -DWITH_KVTREE_PREFIX=`pwd`/install -DWITH_RANKSTR_PREFIX=`pwd`/install .
 make
 make install
-cd ..
-
-rm -rf build
-mkdir build
-cd build
-cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=../install -DMPI=ON ../shuffile.git
-make clean
-make
-make install
-cd ..
-</pre><p>To build ER: </p><pre class="fragment">cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=./install -DWITH_KVTREE_PREFIX=`pwd`/install -DWITH_REDSET_PREFIX=`pwd`/install -DWITH_SHUFFILE_PREFIX=`pwd`/install .
-make
-</pre><h1><a class="anchor" id="autotoc_md34"></a>
+</pre><h1><a class="anchor" id="autotoc_md30"></a>
 Testing</h1>
 <p>Some simple test programs exist in the test directory.</p>
-<p>To build a test for the ER API: </p><pre class="fragment">mpicc -g -O0 -o test_er test_er.c -I../install/include -L../install/lib64 -lkvtree -lshuffile -lredset -lrankstr -I../src -L../src -ler
-</pre><h2><a class="anchor" id="autotoc_md35"></a>
+<p>To build a test for the redset API: </p><pre class="fragment">mpicc -g -O0 -o test_redset test_redset.c -I../install/include -L../install/lib64 -lkvtree -lrankstr -I../src -L../src -lredset
+</pre><h2><a class="anchor" id="autotoc_md31"></a>
 Release</h2>
 <p>Copyright (c) 2018, Lawrence Livermore National Security, LLC. Produced at the Lawrence Livermore National Laboratory. <br />
  Copyright (c) 2018, UChicago Argonne LLC, operator of Argonne National Laboratory.</p>

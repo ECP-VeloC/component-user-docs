@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
     <meta name="generator" content="Doxygen 1.8.15"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>ECP-VELOC Components: Policies</title>
+    <title>ECP-VELOC Components: Encode/Rebuild (ER)</title>
     <!-- <link href="tabs.css" rel="stylesheet" type="text/css"/> -->
     <!-- <script type="text/javascript" src="jquery.js"></script> -->
     <!-- <script type="text/javascript" src="dynsections.js"></script> -->
@@ -43,11 +43,71 @@
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Policies </div>  </div>
+<div class="title">Encode/Rebuild (ER) </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This document details various policies that relate to all components.</p>
-<p>To quickly grant access to all repositories in the ECP-Veloc organization, members of the org can be added to the <a href="https://github.com/orgs/ECP-VeloC/teams">Developers team</a>. This team grants "maintainer" permissions to its members. </p>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md11"></a>
+Overview</h1>
+<p>This module combines the funcitonality of shuffile and redset, which lets both migrate and rebuild files within an MPI job. It is useful for moving and rebuilding data files on distributed storage, e.g., node-local storage, particularly when MPI ranks may be running on different compute nodes than when they originally created their files.</p>
+<p>To encode, one defines a redundancy scheme and then applies the redundancy scheme to a list of files also providing a name for the encoded set. To rebuild, one specifies the name of the encoded set. Additionally, there is a function to remove the encoding information, which is needed when removing a dataset.</p>
+<p>Currently, er assumes the group of processes participating is the same as MPI_COMM_WORLD.</p>
+<p>Usage is documented in <a href="src/er.h">src/er.h</a>.</p>
+<h1><a class="anchor" id="autotoc_md12"></a>
+Building</h1>
+<p>To build dependencies: </p><pre class="fragment">git clone git@github.com:ECP-VeloC/KVTree.git   KVTree.git
+git clone git@github.com:ECP-VeloC/rankstr.git  rankstr.git
+git clone git@github.com:ECP-VeloC/redset.git   redset.git
+git clone git@github.com:ECP-VeloC/shuffile.git shuffile.git
+
+mkdir install
+
+rm -rf build
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=../install -DMPI=ON ../KVTree.git
+make clean
+make
+make install
+cd ..
+
+rm -rf build
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=../install -DMPI=ON ../rankstr.git
+make clean
+make
+make install
+cd ..
+
+rm -rf build
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=../install -DMPI=ON ../redset.git
+make clean
+make
+make install
+cd ..
+
+rm -rf build
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=../install -DMPI=ON ../shuffile.git
+make clean
+make
+make install
+cd ..
+</pre><p>To build ER: </p><pre class="fragment">cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=./install -DWITH_KVTREE_PREFIX=`pwd`/install -DWITH_REDSET_PREFIX=`pwd`/install -DWITH_SHUFFILE_PREFIX=`pwd`/install .
+make
+</pre><h1><a class="anchor" id="autotoc_md13"></a>
+Testing</h1>
+<p>Some simple test programs exist in the test directory.</p>
+<p>To build a test for the ER API: </p><pre class="fragment">mpicc -g -O0 -o test_er test_er.c -I../install/include -L../install/lib64 -lkvtree -lshuffile -lredset -lrankstr -I../src -L../src -ler
+</pre><h2><a class="anchor" id="autotoc_md14"></a>
+Release</h2>
+<p>Copyright (c) 2018, Lawrence Livermore National Security, LLC. Produced at the Lawrence Livermore National Laboratory. <br />
+ Copyright (c) 2018, UChicago Argonne LLC, operator of Argonne National Laboratory.</p>
+<p>For release details and restrictions, please read the [LICENSE]() and [NOTICE]() files.</p>
+<p><code>LLNL-CODE-751725</code> <code>OCEC-18-060</code> </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.15-->
