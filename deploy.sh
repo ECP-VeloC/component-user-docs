@@ -6,7 +6,7 @@ then
     exit 1;
 fi
 
-fi [ "$#" -ne 1 ]; then
+if [ "$#" -ne 1 ]; then
     echo "Usage: $) \"release-name\""
     exit 1;
 fi
