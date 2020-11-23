@@ -817,7 +817,6 @@ INPUT                  =
                          # kvtree/src   \
                          # axl/src      \
                          # spath/src    \
-                         # filo/src     \
                          # shuffile/src \
                          # redset/src   \
                          # rankstr/src  \

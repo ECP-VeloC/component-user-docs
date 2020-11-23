@@ -7,9 +7,6 @@
 [submodule "spath"]
 	path = spath
 	url = git@github.com:ecp-veloc/spath
-[submodule "filo"]
-	path = filo
-	url = git@github.com:ecp-veloc/filo
 [submodule "shuffile"]
 	path = shuffile
 	url = git@github.com:ecp-veloc/shuffile

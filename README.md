@@ -17,7 +17,6 @@ Component | Version | GitHub | Travis CI
 [KVTree](./group__kvtree.html) | ? | [GH](https://github.com/ecp-veloc/kvtree) | [![Build Status](https://api.travis-ci.org/ECP-VeloC/KVTree.png?branch=master)](https://travis-ci.org/ECP-VeloC/KVTree)
 [AXL](./group__axl.html) | ? | [GH](https://github.com/ecp-veloc/axl) | [![Build Status](https://api.travis-ci.org/ECP-VeloC/AXL.png?branch=master)](https://travis-ci.org/ECP-VeloC/AXL)
 [SPath](./group__spath.html) | ? | [GH](https://github.com/ecp-veloc/spath) | [![Build Status](https://api.travis-ci.org/ECP-VeloC/spath.png?branch=master)](https://travis-ci.org/ECP-VeloC/spath)
-[FILO](./group__filo.html) | ? | [GH](https://github.com/ecp-veloc/filo) | [![Build Status](https://api.travis-ci.org/ECP-VeloC/filo.png?branch=master)](https://travis-ci.org/ECP-VeloC/filo)
 [Shuffile](./group__shuffile.html) | ? | [GH](https://github.com/ecp-veloc/shuffile) | [![Build Status](https://api.travis-ci.org/ECP-VeloC/shuffile.png?branch=master)](https://travis-ci.org/ECP-VeloC/shuffile)
 [Redset](./group__redset.html) | ? | [GH](https://github.com/ecp-veloc/redset) | [![Build Status](https://api.travis-ci.org/ECP-VeloC/redset.png?branch=master)](https://travis-ci.org/ECP-VeloC/redset)
 [Rankstr](./group__rankstr.html) | ? | [GH](https://github.com/ecp-veloc/rankstr) | [![Build Status](https://api.travis-ci.org/ECP-VeloC/rankstr.png?branch=master)](https://travis-ci.org/ECP-VeloC/rankstr)

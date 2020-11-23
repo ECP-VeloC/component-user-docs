@@ -12,7 +12,7 @@
 <!-- AXL -->
 <g id="node1" class="node">
 <title>AXL</title>
-<g id="a_node1"><a target="_parent" xlink:href="group__axl.html" xlink:title="AXL\nAsynchronous\nFile Transfer">
+<g id="a_node1"><a xlink:href="group__axl.html" xlink:title="AXL\nAsynchronous\nFile Transfer">
 <ellipse fill="#4eee94" stroke="#4eee94" cx="485.5619" cy="-214.066" rx="68.513" ry="35.2113"/>
 <text text-anchor="middle" x="485.5619" y="-223.866" font-family="Times,serif" font-size="14.00" fill="#000000">AXL</text>
 <text text-anchor="middle" x="485.5619" y="-209.866" font-family="Times,serif" font-size="14.00" fill="#000000">Asynchronous</text>
@@ -23,7 +23,7 @@
 <!-- KVTree -->
 <g id="node5" class="node">
 <title>KVTree</title>
-<g id="a_node5"><a target="_parent" xlink:href="group__kvtree.html" xlink:title="KVTree\nKey&#45;Value\nData Structure">
+<g id="a_node5"><a xlink:href="group__kvtree.html" xlink:title="KVTree\nKey&#45;Value\nData Structure">
 <ellipse fill="#4eee94" stroke="#4eee94" cx="388.5619" cy="-107.3553" rx="68.5262" ry="35.2113"/>
 <text text-anchor="middle" x="388.5619" y="-117.1553" font-family="Times,serif" font-size="14.00" fill="#000000">KVTree</text>
 <text text-anchor="middle" x="388.5619" y="-103.1553" font-family="Times,serif" font-size="14.00" fill="#000000">Key&#45;Value</text>
@@ -40,7 +40,7 @@
 <!-- er -->
 <g id="node2" class="node">
 <title>er</title>
-<g id="a_node2"><a target="_parent" xlink:href="group__er.html" xlink:title="er\nRedundancy\n&amp; Encoding">
+<g id="a_node2"><a xlink:href="group__er.html" xlink:title="er\nRedundancy\n&amp; Encoding">
 <ellipse fill="#4eee94" stroke="#4eee94" cx="247.5619" cy="-320.7767" rx="60.594" ry="35.2113"/>
 <text text-anchor="middle" x="247.5619" y="-330.5767" font-family="Times,serif" font-size="14.00" fill="#000000">er</text>
 <text text-anchor="middle" x="247.5619" y="-316.5767" font-family="Times,serif" font-size="14.00" fill="#000000">Redundancy</text>
@@ -51,7 +51,7 @@
 <!-- redset -->
 <g id="node3" class="node">
 <title>redset</title>
-<g id="a_node3"><a target="_parent" xlink:href="group__redset.html" xlink:title="redset\nRedundancy Sets">
+<g id="a_node3"><a xlink:href="group__redset.html" xlink:title="redset\nRedundancy Sets">
 <ellipse fill="#4eee94" stroke="#4eee94" cx="242.5619" cy="-214.066" rx="79.5485" ry="25.4118"/>
 <text text-anchor="middle" x="242.5619" y="-216.866" font-family="Times,serif" font-size="14.00" fill="#000000">redset</text>
 <text text-anchor="middle" x="242.5619" y="-202.866" font-family="Times,serif" font-size="14.00" fill="#000000">Redundancy Sets</text>
@@ -67,7 +67,7 @@
 <!-- shuffile -->
 <g id="node4" class="node">
 <title>shuffile</title>
-<g id="a_node4"><a target="_parent" xlink:href="group__shuffile.html" xlink:title="shuffile\nShuffle Files">
+<g id="a_node4"><a xlink:href="group__shuffile.html" xlink:title="shuffile\nShuffle Files">
 <ellipse fill="#4eee94" stroke="#4eee94" cx="83.5619" cy="-214.066" rx="61.7855" ry="25.4118"/>
 <text text-anchor="middle" x="83.5619" y="-216.866" font-family="Times,serif" font-size="14.00" fill="#000000">shuffile</text>
 <text text-anchor="middle" x="83.5619" y="-202.866" font-family="Times,serif" font-size="14.00" fill="#000000">Shuffle Files</text>
@@ -107,7 +107,7 @@
 <!-- rankstr -->
 <g id="node6" class="node">
 <title>rankstr</title>
-<g id="a_node6"><a target="_parent" xlink:href="group__rankstr.html" xlink:title="rankstr\nUnique MPI\nRank Strings">
+<g id="a_node6"><a xlink:href="group__rankstr.html" xlink:title="rankstr\nUnique MPI\nRank Strings">
 <ellipse fill="#4eee94" stroke="#4eee94" cx="567.5619" cy="-107.3553" rx="62.9806" ry="35.2113"/>
 <text text-anchor="middle" x="567.5619" y="-117.1553" font-family="Times,serif" font-size="14.00" fill="#000000">rankstr</text>
 <text text-anchor="middle" x="567.5619" y="-103.1553" font-family="Times,serif" font-size="14.00" fill="#000000">Unique MPI</text>
@@ -154,7 +154,7 @@
 <!-- filo -->
 <g id="node7" class="node">
 <title>filo</title>
-<g id="a_node7"><a target="_parent" xlink:href="group__filo.html" xlink:title="filo\nFile Fetching">
+<g id="a_node7"><a xlink:href="group__filo.html" xlink:title="filo\nFile Fetching">
 <ellipse fill="#4eee94" stroke="#4eee94" cx="674.5619" cy="-320.7767" rx="63.665" ry="25.4118"/>
 <text text-anchor="middle" x="674.5619" y="-323.5767" font-family="Times,serif" font-size="14.00" fill="#000000">filo</text>
 <text text-anchor="middle" x="674.5619" y="-309.5767" font-family="Times,serif" font-size="14.00" fill="#000000">File Fetching</text>
@@ -176,7 +176,7 @@
 <!-- spath -->
 <g id="node8" class="node">
 <title>spath</title>
-<g id="a_node8"><a target="_parent" xlink:href="group__spath.html" xlink:title="spath\nSCR Paths">
+<g id="a_node8"><a xlink:href="group__spath.html" xlink:title="spath\nSCR Paths">
 <ellipse fill="#4eee94" stroke="#4eee94" cx="740.5619" cy="-214.066" rx="53.9043" ry="25.4118"/>
 <text text-anchor="middle" x="740.5619" y="-216.866" font-family="Times,serif" font-size="14.00" fill="#000000">spath</text>
 <text text-anchor="middle" x="740.5619" y="-202.866" font-family="Times,serif" font-size="14.00" fill="#000000">SCR Paths</text>
