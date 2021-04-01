@@ -1,13 +1,30 @@
 #!/bin/sh
 
-if [[ $(git status -s) ]]
-then
-    echo "The working directory is dirty. Please commit any pending changes."
+# Check prerequisites
+if [ ! -d ".git/modules" ]; then
+    echo "Looks like the submodules have not been initialized."
+    echo "Run `git submodule init` before continuing."
     exit 1;
 fi
 
+if [[ $(git status -s) ]]
+then
+    if [ "$1" != "-f" ]; then
+        echo "The working directory is dirty. Please commit any pending changes."
+        exit 1;
+    else
+        shift
+    fi
+fi
+
 if [ "$#" -ne 1 ]; then
-    echo "Usage: $) \"release-name\""
+    echo "Usage: $0 \"release-name\""
+    exit 1;
+fi
+
+if ! command -v doxygen &> /dev/null
+then
+    echo "Error: doxygen required"
     exit 1;
 fi
 
@@ -17,7 +34,7 @@ echo "Deleting old generated files"
 rm -rf html
 mkdir html
 git worktree prune
-rm -rm .git/worktrees/gh-pages
+rm -rf .git/worktrees/gh-pages
 
 echo "Checking out gh-pages branch"
 git worktree add -B gh-pages html origin/gh-pages
@@ -33,6 +50,8 @@ cd html && git add --all && git commit -m "$1"
 cd ..
 
 # TODO: automatically push changes
-echo "DONE"
-echo "Generated files are commited on 'gh-pages' branch"
+echo ""
+echo ""
+echo "** DONE **"
+echo "Generated files are commited in 'html' directory (on 'gh-pages' branch)"
 echo "DON'T FORGET TO PUSH THESE CHANGES TO 'origin'"
