@@ -128,6 +128,10 @@ Functions</h2></td></tr>
 <tr class="memitem:aa23c218ff99e1ee1e0343281ff94354d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspath.html">spath</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#aa23c218ff99e1ee1e0343281ff94354d">spath_cut</a> (<a class="el" href="structspath.html">spath</a> *path, int offset)</td></tr>
 <tr class="separator:aa23c218ff99e1ee1e0343281ff94354d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">simplify and resolve functions</div></td></tr>
+<tr class="memitem:ad2eacae2501796195ecada9ec7bb9b81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspath.html">spath</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#ad2eacae2501796195ecada9ec7bb9b81">spath_cwd</a> (void)</td></tr>
+<tr class="separator:ad2eacae2501796195ecada9ec7bb9b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71578f21ea1e684bb78955b71c3d7103"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a71578f21ea1e684bb78955b71c3d7103">spath_realpath</a> (<a class="el" href="structspath.html">spath</a> *path)</td></tr>
+<tr class="separator:a71578f21ea1e684bb78955b71c3d7103"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26f149e8e0bbf7d4a6a59c263ea65fb1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a26f149e8e0bbf7d4a6a59c263ea65fb1">spath_reduce</a> (<a class="el" href="structspath.html">spath</a> *path)</td></tr>
 <tr class="separator:a26f149e8e0bbf7d4a6a59c263ea65fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ac3da775531230942a09ab20578185a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a0ac3da775531230942a09ab20578185a">spath_strdup_reduce_str</a> (const char *str)</td></tr>
@@ -297,6 +301,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>chops path at specified location and returns remainder as new path, offset can be negative to count from back of path </p>
+
+</div>
+</div>
+<a id="ad2eacae2501796195ecada9ec7bb9b81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2eacae2501796195ecada9ec7bb9b81">&#9670;&nbsp;</a></span>spath_cwd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structspath.html">spath</a>* spath_cwd </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>allocate a new path initialized with current working dir </p>
 
 </div>
 </div>
@@ -704,6 +727,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>prepends components in string to path </p>
+
+</div>
+</div>
+<a id="a71578f21ea1e684bb78955b71c3d7103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71578f21ea1e684bb78955b71c3d7103">&#9670;&nbsp;</a></span>spath_realpath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int spath_realpath </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>apply realpath to given path </p>
 
 </div>
 </div>

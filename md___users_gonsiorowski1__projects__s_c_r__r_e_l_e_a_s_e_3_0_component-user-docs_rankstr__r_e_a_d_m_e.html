@@ -59,11 +59,11 @@
 <div class="line">gethostname(hostname, sizeof(hostname));</div>
 <div class="line">rankstr_mpi_comm_split(MPI_COMM_WORLD, hostname, 0, 1, 2, &amp;newcomm);</div>
 </div><!-- fragment --><p>Here, MPI_COMM_WORLD is the input communicator that is to be split, and the hostname string acts as the color value. The third parameter (0) is the key, which has the same meaning as in MPI_Comm_split. The next two parameters (1, 2) are tag values the function will use for its point-to-point messages on the input communicator. These two tags values must be distinct. Finally, the resulting communicator is output in newcomm.</p>
-<p>For more detailed usage, see <a href="src/rankstr_mpi.h">src/rankstr_mpi.h</a>.</p>
-<h1><a class="anchor" id="autotoc_md21"></a>
+<p>For more detailed usage, see <a href="src/rankstr_mpi.h">src/rankstr_mpi.h</a> and the <a href="https://ecp-veloc.github.io/component-user-docs/group__rankstr.html">User API docs</a>.</p>
+<h1><a class="anchor" id="autotoc_md54"></a>
 Build</h1>
 <div class="fragment"><div class="line">cmake -DCMAKE_INSTALL_PREFIX=/path/to/install .</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md22"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md55"></a>
 Release</h1>
 <p>Copyright (c) 2018, Lawrence Livermore National Security, LLC. Produced at the Lawrence Livermore National Laboratory. <br  />
  Copyright (c) 2018, UChicago Argonne LLC, operator of Argonne National Laboratory.</p>

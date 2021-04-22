@@ -64,6 +64,8 @@ Functions</h2></td></tr>
 <tr class="separator:a737f97c04b2faab78c86c24620b1b922"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0beec35fa252768729e81d3124f9c2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shuffile_8h.html#ab0beec35fa252768729e81d3124f9c2a">shuffile_finalize</a> ()</td></tr>
 <tr class="separator:ab0beec35fa252768729e81d3124f9c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca2b0d7ef5a4eada2a92bd1133bb27d0"><td class="memItemLeft" align="right" valign="top">kvtree *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shuffile_8h.html#aca2b0d7ef5a4eada2a92bd1133bb27d0">shuffile_config</a> (const kvtree *config)</td></tr>
+<tr class="separator:aca2b0d7ef5a4eada2a92bd1133bb27d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22a1a72953f83f6ff111e378feb24e09"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shuffile_8h.html#a22a1a72953f83f6ff111e378feb24e09">shuffile_create</a> (MPI_Comm comm, MPI_Comm comm_store, int numfiles, const char **files, const char *name)</td></tr>
 <tr class="separator:a22a1a72953f83f6ff111e378feb24e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8294f9f8419327a4704bb6e7477301e3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shuffile_8h.html#a8294f9f8419327a4704bb6e7477301e3">shuffile_migrate</a> (MPI_Comm comm, MPI_Comm comm_store, const char *name)</td></tr>
@@ -72,6 +74,43 @@ Functions</h2></td></tr>
 <tr class="separator:a76bcbbbc533624ad704e01aabac10614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aca2b0d7ef5a4eada2a92bd1133bb27d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca2b0d7ef5a4eada2a92bd1133bb27d0">&#9670;&nbsp;</a></span>shuffile_config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kvtree* shuffile_config </td>
+          <td>(</td>
+          <td class="paramtype">const kvtree *&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get/set shuffile configuration values.</p>
+<p>The following configuration options can be set (type in parenthesis):</p><ul>
+<li>"DEBUG" (int) - if non-zero, output debug information from inside shuffile.</li>
+<li>"MPI_BUF_SIZE" (byte count [IN], int [OUT]) - MPI buffer size to chunk file transfer. Must not exceed INT_MAX.</li>
+</ul>
+<p>Symbolic names SHUFFILE_KEY_CONFIG_FOO are defined in <a class="el" href="shuffile_8h.html" title="shuffle files between mpi ranks">shuffile.h</a> and should be used instead of the strings whenever possible to guard against typos in strings.</p>
+<dl class="section return"><dt>Returns</dt><dd>If config != NULL, then return config on success. If config == NULL (you're querying the config) then return a new kvtree on success, which must be <a class="el" href="kvtree_8h.html#ade022ca4a041af60669b2868fea03007">kvtree_delete()</a>ed by the caller. NULL on any failures. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>The new configuration. If config == NULL, then return a kvtree with all the configuration values. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>[IN] - kvtree of options </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a22a1a72953f83f6ff111e378feb24e09"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a22a1a72953f83f6ff111e378feb24e09">&#9670;&nbsp;</a></span>shuffile_create()</h2>
 

@@ -48,9 +48,9 @@
 <div class="contents">
 <div class="textblock"><p><a href="https://travis-ci.org/ECP-VeloC/redset"><img src="https://api.travis-ci.org/ECP-VeloC/redset.png?branch=master" alt="Build Status" class="inline"/></a></p>
 <p>This module lets one create one or more redundancy descriptors, which then may be applied to a set of files distributed across a group of processes.</p>
-<p>Usage is documented in <a href="src/redset.h">src/redset.h</a> and <a href="doc/rst/redset.rst">doc/rst/redset.rst</a>. Also see the example program in the [test](test) directory.</p>
+<p>Usage is documented in <a href="src/redset.h">src/redset.h</a>, <a href="doc/rst/redset.rst">doc/rst/redset.rst</a>, and the <a href="https://ecp-veloc.github.io/component-user-docs/group__redset.html">User API docs</a>. Also see the example program in the [test](test) directory.</p>
 <p>Implementation details can be found in <a href="doc/rst/implementation.rst">doc/rst/implementation.rst</a> and <a href="doc/rst/schemes.rst">doc/rst/schemes.rst</a>.</p>
-<h1><a class="anchor" id="autotoc_md25"></a>
+<h1><a class="anchor" id="autotoc_md66"></a>
 Building</h1>
 <p>To build dependencies: </p><pre class="fragment">git clone git@github.com:ECP-VeloC/KVTree.git  KVTree.git
 git clone git@github.com:ECP-VeloC/rankstr.git rankstr.git
@@ -77,11 +77,11 @@ cd ..
 </pre><p>To build redset: </p><pre class="fragment">cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=./install -DWITH_KVTREE_PREFIX=`pwd`/install -DWITH_RANKSTR_PREFIX=`pwd`/install .
 make
 make install
-</pre><h1><a class="anchor" id="autotoc_md26"></a>
+</pre><h1><a class="anchor" id="autotoc_md67"></a>
 Testing</h1>
 <p>Some simple test programs exist in the test directory.</p>
 <p>To build a test for the redset API: </p><pre class="fragment">mpicc -g -O0 -o test_redset test_redset.c -I../install/include -L../install/lib64 -lkvtree -lrankstr -I../src -L../src -lredset
-</pre><h2><a class="anchor" id="autotoc_md27"></a>
+</pre><h2><a class="anchor" id="autotoc_md68"></a>
 Release</h2>
 <p>Copyright (c) 2018, Lawrence Livermore National Security, LLC. Produced at the Lawrence Livermore National Laboratory. <br  />
  Copyright (c) 2018, UChicago Argonne LLC, operator of Argonne National Laboratory.</p>

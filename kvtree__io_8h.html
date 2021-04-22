@@ -49,12 +49,9 @@
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">kvtree_io.h File Reference<div class="ingroups"><a class="el" href="group__kvtree.html">KVTree</a></div></div>  </div>
+<div class="title">kvtree_io.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Basic File I/O.  
-<a href="#details">More...</a></p>
 
 <p><a href="kvtree__io_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -70,8 +67,8 @@ Functions</h2></td></tr>
 <tr class="separator:ab11d3a0d74336f136715bf4c5c0c0014"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b02ecf617341fec1118ddae35bc39be"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvtree__io_8h.html#a7b02ecf617341fec1118ddae35bc39be">kvtree_file_unlock</a> (const char *file, int fd)</td></tr>
 <tr class="separator:a7b02ecf617341fec1118ddae35bc39be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f23adbc644b36c9a25b75732e3f5a90"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvtree__io_8h.html#a1f23adbc644b36c9a25b75732e3f5a90">kvtree_open_with_lock</a> (const char *file, int flags, mode_t mode)</td></tr>
-<tr class="separator:a1f23adbc644b36c9a25b75732e3f5a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e66d53aee1f0e97ca483d0950fea404"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvtree__io_8h.html#a9e66d53aee1f0e97ca483d0950fea404">kvtree_open_with_lock</a> (const char *file, int flags, mode_t mode, int write)</td></tr>
+<tr class="separator:a9e66d53aee1f0e97ca483d0950fea404"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ad1e14595c0e14b1e261ee819b9e1a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvtree__io_8h.html#a2ad1e14595c0e14b1e261ee819b9e1a1">kvtree_close_with_unlock</a> (const char *file, int fd)</td></tr>
 <tr class="separator:a2ad1e14595c0e14b1e261ee819b9e1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00377d28a65af6cd80e495eec6cad425"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvtree__io_8h.html#a00377d28a65af6cd80e495eec6cad425">kvtree_lseek</a> (const char *file, int fd, off_t pos, int whence)</td></tr>
@@ -329,8 +326,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1f23adbc644b36c9a25b75732e3f5a90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f23adbc644b36c9a25b75732e3f5a90">&#9670;&nbsp;</a></span>kvtree_open_with_lock()</h2>
+<a id="a9e66d53aee1f0e97ca483d0950fea404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e66d53aee1f0e97ca483d0950fea404">&#9670;&nbsp;</a></span>kvtree_open_with_lock()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -351,7 +348,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">mode_t&#160;</td>
-          <td class="paramname"><em>mode</em>&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>write</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -360,7 +363,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>opens specified file and waits on for an exclusive lock before returning the file descriptor </p>
+<p>opens specified file and waits for a shared lock if write=0 or an exclusive lock if write=1 before returning the file descriptor </p>
 
 </div>
 </div>

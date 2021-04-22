@@ -48,8 +48,8 @@
 <div class="contents">
 <div class="textblock"><p><a href="https://travis-ci.org/ECP-VeloC/shuffile"><img src="https://api.travis-ci.org/ECP-VeloC/shuffile.png?branch=master" alt="Build Status" class="inline"/></a></p>
 <p>This module lets one associate a set of files with a process name. Currently, the name is implied to be the rank within MPI_COMM_WORLD. In the event that a set of distributed processes are moved, for example when restarting an MPI job, functions will migrate files from their original locations to the new locations where the processes are running.</p>
-<p>Usage is documented in <a class="el" href="shuffile_8h.html" title="shuffle files between mpi ranks">src/shuffile.h</a>.</p>
-<h1><a class="anchor" id="autotoc_md29"></a>
+<p>Usage is documented in [<a class="el" href="shuffile_8h.html" title="shuffle files between mpi ranks">src/shuffile.h</a>]() and the <a href="https://ecp-veloc.github.io/component-user-docs/group__shuffile.html">User API docs</a>.</p>
+<h1><a class="anchor" id="autotoc_md78"></a>
 Building</h1>
 <p>To build KVTree: </p><pre class="fragment">git clone git@github.com:LLNL/KVTree.git KVTree.git
 
@@ -61,12 +61,12 @@ cmake -DCMAKE_INSTALL_PREFIX=../install -DMPI=ON ../KVTree.git
 make clean
 make
 make install
-make test
 </pre><p>To build shuffile: </p><pre class="fragment">cmake -DCMAKE_BUILD_TYPE=Debug -DWITH_KVTREE_PREFIX=`pwd`/install .
-</pre><h1><a class="anchor" id="autotoc_md30"></a>
+make
+</pre><h1><a class="anchor" id="autotoc_md79"></a>
 Testing</h1>
-<p>Some simple test programs exist in the test directory. </p><pre class="fragment">mpicc -g -O0 -o test1 test1.c -I../install/include -L../install/lib64 -lkvtree -I../src -L../src -lshuffile
-</pre><h2><a class="anchor" id="autotoc_md31"></a>
+<p>Some simple test programs exist in the test directory that are run by the <code>test</code> target. </p><pre class="fragment">make test
+</pre><h2><a class="anchor" id="autotoc_md80"></a>
 Release</h2>
 <p>Copyright (c) 2018, Lawrence Livermore National Security, LLC. Produced at the Lawrence Livermore National Laboratory. <br  />
  Copyright (c) 2018, UChicago Argonne LLC, operator of Argonne National Laboratory.</p>

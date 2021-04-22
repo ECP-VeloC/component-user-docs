@@ -53,50 +53,68 @@
 <a href="redset__util_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef REDSET_UTIL_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define REDSET_UTIL_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;mpi.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kvtree_8h.html">kvtree.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define REDSET_FAILURE (1)</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define REDSET_MAX_FILENAME (1024)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;sys/stat.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;fcntl.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;mpi.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kvtree_8h.html">kvtree.h</a>&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="redset__util_8h.html#a7109a99afe7080780489ab061759c8d8">redset_rank</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">char</span>* <a class="code" href="redset__util_8h.html#a010f4310a7fa9b6483e37764c679c962">redset_hostname</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="redset__util_8h.html#a95ce01ccd876eb1fc175085ce6cabf8f">redset_mpi_buf_size</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">size_t</span> <a class="code" href="redset__util_8h.html#af83c013ed7b92ba7432d168e3703dea6">redset_page_size</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define REDSET_FAILURE (1)</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define REDSET_MAX_FILENAME (1024)</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="redset__util_8h.html#a3f9b9f8857beec55fd1d7362d9fad2a6">redset_debug</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="redset__util_8h.html#ab84d4d7475e20cbcd07efd448a11d011">redset_err</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="redset__util_8h.html#ae3301cc1da5a31fa966d0370c7a1e3f9">redset_warn</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="redset__util_8h.html#a2c3eae362099d38ad790a1c2150b507e">redset_dbg</a>(<span class="keywordtype">int</span> level, <span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="redset__util_8h.html#a7109a99afe7080780489ab061759c8d8">redset_rank</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">char</span>* <a class="code" href="redset__util_8h.html#a010f4310a7fa9b6483e37764c679c962">redset_hostname</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="redset__util_8h.html#a95ce01ccd876eb1fc175085ce6cabf8f">redset_mpi_buf_size</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">size_t</span> <a class="code" href="redset__util_8h.html#af83c013ed7b92ba7432d168e3703dea6">redset_page_size</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="redset__util_8h.html#ab84d4d7475e20cbcd07efd448a11d011">redset_err</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> <a class="code" href="redset__util_8h.html#a0842491f0430cbf34bd218ee0a892929">redset_abort</a>(<span class="keywordtype">int</span> rc, <span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> <a class="code" href="redset__util_8h.html#ae3301cc1da5a31fa966d0370c7a1e3f9">redset_warn</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define REDSET_MALLOC(X) redset_malloc(X, __FILE__, __LINE__);</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="redset__util_8h.html#a4209fcada71f21d5ebd2ee256c1bff0c">redset_malloc</a>(<span class="keywordtype">size_t</span> size, <span class="keyword">const</span> <span class="keywordtype">char</span>* file, <span class="keywordtype">int</span> line);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">void</span> <a class="code" href="redset__util_8h.html#aaef943d64d9cfafc6d5d83b07744c4c2">redset_free</a>(<span class="keywordtype">void</span>* ptr);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="redset__util_8h.html#ad3d5cbf2a542eef81d988c2d2302299a">redset_align_malloc</a>(<span class="keywordtype">size_t</span> size, <span class="keywordtype">size_t</span> align);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> <a class="code" href="redset__util_8h.html#a2c3eae362099d38ad790a1c2150b507e">redset_dbg</a>(<span class="keywordtype">int</span> level, <span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">void</span> <a class="code" href="redset__util_8h.html#a0842491f0430cbf34bd218ee0a892929">redset_abort</a>(<span class="keywordtype">int</span> rc, <span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define REDSET_MALLOC(X) redset_malloc(X, __FILE__, __LINE__);</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="redset__util_8h.html#a4209fcada71f21d5ebd2ee256c1bff0c">redset_malloc</a>(<span class="keywordtype">size_t</span> size, <span class="keyword">const</span> <span class="keywordtype">char</span>* file, <span class="keywordtype">int</span> line);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> <a class="code" href="redset__util_8h.html#a1ec82f97a288fb14a09b35e8d920dc8d">redset_align_free</a>(<span class="keywordtype">void</span>* buf);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> <a class="code" href="redset__util_8h.html#aaef943d64d9cfafc6d5d83b07744c4c2">redset_free</a>(<span class="keywordtype">void</span>* ptr);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">int</span> <a class="code" href="redset__util_8h.html#a8110d0e77144268a498bede17d60e55f">redset_str_sendrecv</a>(</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* send_str, <span class="keywordtype">int</span> send_rank,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">char</span>** recv_str, <span class="keywordtype">int</span> recv_rank,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  MPI_Comm comm</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">int</span> <a class="code" href="redset__util_8h.html#ab2b2c68a10c24927245174c98cfee990">redset_alltrue</a>(<span class="keywordtype">int</span> flag, MPI_Comm comm);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="redset__util_8h.html#ad3d5cbf2a542eef81d988c2d2302299a">redset_align_malloc</a>(<span class="keywordtype">size_t</span> size, <span class="keywordtype">size_t</span> align);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span> <a class="code" href="redset__util_8h.html#a1ec82f97a288fb14a09b35e8d920dc8d">redset_align_free</a>(<span class="keywordtype">void</span>* buf);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">int</span> <a class="code" href="redset__util_8h.html#a8110d0e77144268a498bede17d60e55f">redset_str_sendrecv</a>(</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* send_str, <span class="keywordtype">int</span> send_rank,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">char</span>** recv_str, <span class="keywordtype">int</span> recv_rank,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  MPI_Comm comm</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">int</span> <a class="code" href="redset__util_8h.html#ab2b2c68a10c24927245174c98cfee990">redset_alltrue</a>(<span class="keywordtype">int</span> flag, MPI_Comm comm);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">/* recursively sort a kvtree in alphabetical order */</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span> <a class="code" href="redset__util_8h.html#a97e8d1546ac6dc2f512104c3416abbcf">redset_sort_kvtree</a>(kvtree* hash);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">/* allocate a set of buffers for MPI communication or redundancy encoding */</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">void</span>** <a class="code" href="redset__util_8h.html#a54473a9813a0f5de07b69c9a89f99813">redset_buffers_alloc</a>(<span class="keywordtype">int</span> num, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">/* free a set of buffers allocated in redset_buffers_alloc */</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">void</span> <a class="code" href="redset__util_8h.html#afc890bb7b28a87e80d7827ff29f8a424">redset_buffers_free</a>(<span class="keywordtype">int</span> num, <span class="keywordtype">void</span>* pbufs);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aredset__util_8h_html_a4209fcada71f21d5ebd2ee256c1bff0c"><div class="ttname"><a href="redset__util_8h.html#a4209fcada71f21d5ebd2ee256c1bff0c">redset_malloc</a></div><div class="ttdeci">void * redset_malloc(size_t size, const char *file, int line)</div></div>
+<div class="ttc" id="aredset__util_8h_html_a97e8d1546ac6dc2f512104c3416abbcf"><div class="ttname"><a href="redset__util_8h.html#a97e8d1546ac6dc2f512104c3416abbcf">redset_sort_kvtree</a></div><div class="ttdeci">void redset_sort_kvtree(kvtree *hash)</div></div>
+<div class="ttc" id="aredset__util_8h_html_a3f9b9f8857beec55fd1d7362d9fad2a6"><div class="ttname"><a href="redset__util_8h.html#a3f9b9f8857beec55fd1d7362d9fad2a6">redset_debug</a></div><div class="ttdeci">int redset_debug</div></div>
 <div class="ttc" id="aredset__util_8h_html_aaef943d64d9cfafc6d5d83b07744c4c2"><div class="ttname"><a href="redset__util_8h.html#aaef943d64d9cfafc6d5d83b07744c4c2">redset_free</a></div><div class="ttdeci">void redset_free(void *ptr)</div></div>
 <div class="ttc" id="aredset__util_8h_html_ad3d5cbf2a542eef81d988c2d2302299a"><div class="ttname"><a href="redset__util_8h.html#ad3d5cbf2a542eef81d988c2d2302299a">redset_align_malloc</a></div><div class="ttdeci">void * redset_align_malloc(size_t size, size_t align)</div></div>
 <div class="ttc" id="aredset__util_8h_html_a010f4310a7fa9b6483e37764c679c962"><div class="ttname"><a href="redset__util_8h.html#a010f4310a7fa9b6483e37764c679c962">redset_hostname</a></div><div class="ttdeci">char * redset_hostname</div></div>
+<div class="ttc" id="aredset__util_8h_html_afc890bb7b28a87e80d7827ff29f8a424"><div class="ttname"><a href="redset__util_8h.html#afc890bb7b28a87e80d7827ff29f8a424">redset_buffers_free</a></div><div class="ttdeci">void redset_buffers_free(int num, void *pbufs)</div></div>
 <div class="ttc" id="aredset__util_8h_html_ae3301cc1da5a31fa966d0370c7a1e3f9"><div class="ttname"><a href="redset__util_8h.html#ae3301cc1da5a31fa966d0370c7a1e3f9">redset_warn</a></div><div class="ttdeci">void redset_warn(const char *fmt,...)</div></div>
 <div class="ttc" id="aredset__util_8h_html_a0842491f0430cbf34bd218ee0a892929"><div class="ttname"><a href="redset__util_8h.html#a0842491f0430cbf34bd218ee0a892929">redset_abort</a></div><div class="ttdeci">void redset_abort(int rc, const char *fmt,...)</div></div>
 <div class="ttc" id="aredset__util_8h_html_a8110d0e77144268a498bede17d60e55f"><div class="ttname"><a href="redset__util_8h.html#a8110d0e77144268a498bede17d60e55f">redset_str_sendrecv</a></div><div class="ttdeci">int redset_str_sendrecv(const char *send_str, int send_rank, char **recv_str, int recv_rank, MPI_Comm comm)</div></div>
@@ -106,6 +124,7 @@
 <div class="ttc" id="aredset__util_8h_html_a2c3eae362099d38ad790a1c2150b507e"><div class="ttname"><a href="redset__util_8h.html#a2c3eae362099d38ad790a1c2150b507e">redset_dbg</a></div><div class="ttdeci">void redset_dbg(int level, const char *fmt,...)</div></div>
 <div class="ttc" id="aredset__util_8h_html_ab2b2c68a10c24927245174c98cfee990"><div class="ttname"><a href="redset__util_8h.html#ab2b2c68a10c24927245174c98cfee990">redset_alltrue</a></div><div class="ttdeci">int redset_alltrue(int flag, MPI_Comm comm)</div></div>
 <div class="ttc" id="aredset__util_8h_html_a7109a99afe7080780489ab061759c8d8"><div class="ttname"><a href="redset__util_8h.html#a7109a99afe7080780489ab061759c8d8">redset_rank</a></div><div class="ttdeci">int redset_rank</div></div>
+<div class="ttc" id="aredset__util_8h_html_a54473a9813a0f5de07b69c9a89f99813"><div class="ttname"><a href="redset__util_8h.html#a54473a9813a0f5de07b69c9a89f99813">redset_buffers_alloc</a></div><div class="ttdeci">void ** redset_buffers_alloc(int num, size_t size)</div></div>
 <div class="ttc" id="aredset__util_8h_html_a95ce01ccd876eb1fc175085ce6cabf8f"><div class="ttname"><a href="redset__util_8h.html#a95ce01ccd876eb1fc175085ce6cabf8f">redset_mpi_buf_size</a></div><div class="ttdeci">int redset_mpi_buf_size</div></div>
 <div class="ttc" id="aredset__util_8h_html_ab84d4d7475e20cbcd07efd448a11d011"><div class="ttname"><a href="redset__util_8h.html#ab84d4d7475e20cbcd07efd448a11d011">redset_err</a></div><div class="ttdeci">void redset_err(const char *fmt,...)</div></div>
 <!-- HTML footer for doxygen 1.8.15-->
