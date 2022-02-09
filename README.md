@@ -14,11 +14,11 @@ For more details, read the [veloc user documentation](https://veloc.rtfd.io).
 
 Component | Version | GitHub | Travis CI
 ----------|---------|--------|----------
-[KVTree](./group__kvtree.html) | ? | [GH](https://github.com/ecp-veloc/kvtree) | [![Build Status](https://api.travis-ci.org/ECP-VeloC/KVTree.png?branch=main)](https://travis-ci.org/ECP-VeloC/KVTree)
-[AXL](./group__axl.html) | ? | [GH](https://github.com/ecp-veloc/axl) | [![Build Status](https://api.travis-ci.org/ECP-VeloC/AXL.png?branch=main)](https://travis-ci.org/ECP-VeloC/AXL)
-[SPath](./group__spath.html) | ? | [GH](https://github.com/ecp-veloc/spath) | [![Build Status](https://api.travis-ci.org/ECP-VeloC/spath.png?branch=main)](https://travis-ci.org/ECP-VeloC/spath)
-[Shuffile](./group__shuffile.html) | ? | [GH](https://github.com/ecp-veloc/shuffile) | [![Build Status](https://api.travis-ci.org/ECP-VeloC/shuffile.png?branch=main)](https://travis-ci.org/ECP-VeloC/shuffile)
-[Redset](./group__redset.html) | ? | [GH](https://github.com/ecp-veloc/redset) | [![Build Status](https://api.travis-ci.org/ECP-VeloC/redset.png?branch=main)](https://travis-ci.org/ECP-VeloC/redset)
-[Rankstr](./group__rankstr.html) | ? | [GH](https://github.com/ecp-veloc/rankstr) | [![Build Status](https://api.travis-ci.org/ECP-VeloC/rankstr.png?branch=main)](https://travis-ci.org/ECP-VeloC/rankstr)
-[ER](./group__er.html) | ? | [GH](https://github.com/ecp-veloc/er) | [![Build Status](https://api.travis-ci.org/ECP-VeloC/er.png?branch=main)](https://travis-ci.org/ECP-VeloC/er)
+[KVTree](./group__kvtree.html)     | ? | [GH](https://github.com/ecp-veloc/kvtree)   | [![Build&Test](https://github.com/ECP-VeloC/KVTree/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/ECP-VeloC/KVTree/actions/workflows/build-and-test.yml)
+[AXL](./group__axl.html)           | ? | [GH](https://github.com/ecp-veloc/axl)      | [![Build Only](https://github.com/ECP-VeloC/AXL/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/ECP-VeloC/AXL/actions/workflows/build-and-test.yml)
+[SPath](./group__spath.html)       | ? | [GH](https://github.com/ecp-veloc/spath)    | [![Build&Test](https://github.com/ECP-VeloC/spath/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/ECP-VeloC/spath/actions/workflows/build-and-test.yml)
+[Shuffile](./group__shuffile.html) | ? | [GH](https://github.com/ecp-veloc/shuffile) | [![Build Only](https://github.com/ECP-VeloC/shuffile/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/ECP-VeloC/shuffile/actions/workflows/build-and-test.yml)
+[Redset](./group__redset.html)     | ? | [GH](https://github.com/ecp-veloc/redset)   | [![Build Only](https://github.com/ECP-VeloC/redset/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/ECP-VeloC/redset/actions/workflows/build-and-test.yml)
+[Rankstr](./group__rankstr.html)   | ? | [GH](https://github.com/ecp-veloc/rankstr)  | [![Build&Test](https://github.com/ECP-VeloC/rankstr/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/ECP-VeloC/rankstr/actions/workflows/build-and-test.yml)
+[ER](./group__er.html)             | ? | [GH](https://github.com/ecp-veloc/er)       | [![Build Only](https://github.com/ECP-VeloC/er/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/ECP-VeloC/er/actions/workflows/build-and-test.yml)
 </center>
