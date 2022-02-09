@@ -27,5 +27,5 @@ jobs:
       - name: deploy
         run: |
           cd component-user-docs
-          ./deploy.sh `git log --pretty=format:'%h %s' --abbrev-commit -n 1`
+          ./deploy.sh "`git log --pretty=format:'%h %s' --abbrev-commit -n 1`"
           git push origin gh-pages

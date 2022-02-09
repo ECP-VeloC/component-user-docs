@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Check prerequisites
 if [ ! -d ".git/modules" ]; then
