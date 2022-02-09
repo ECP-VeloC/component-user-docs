@@ -1,0 +1,31 @@
+name: doxygen deploy
+
+permissions:
+  actions: write
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  doxygen-deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          path: component-user-docs
+          fetch-depth: 0
+          submodules: true
+
+      - name: install doxygen
+        run: |
+          sudo apt-get install doxygen
+
+      - name: deploy
+        run: |
+          cd component-user-docs
+          ./deploy.sh `git log --pretty=format:'%h %s' --abbrev-commit -n 1`
+          git push origin gh-pages
