@@ -12,8 +12,8 @@ For more details, read the [veloc user documentation](https://veloc.rtfd.io).
 <center>
 <img alt="Components Diagram" src="./components.svg" width="750px" style="max-width: 100%; text-align: center;" use-map="#g">
 
-Component | Version | GitHub | Travis CI
-----------|---------|--------|----------
+Component | Version | GitHub | GitHub Actions
+----------|---------|--------|---------------
 [KVTree](./group__kvtree.html)     | ? | [GH](https://github.com/ecp-veloc/kvtree)   | [![Build&Test](https://github.com/ECP-VeloC/KVTree/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/ECP-VeloC/KVTree/actions/workflows/build-and-test.yml)
 [AXL](./group__axl.html)           | ? | [GH](https://github.com/ecp-veloc/axl)      | [![Build Only](https://github.com/ECP-VeloC/AXL/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/ECP-VeloC/AXL/actions/workflows/build-and-test.yml)
 [SPath](./group__spath.html)       | ? | [GH](https://github.com/ecp-veloc/spath)    | [![Build&Test](https://github.com/ECP-VeloC/spath/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/ECP-VeloC/spath/actions/workflows/build-and-test.yml)
