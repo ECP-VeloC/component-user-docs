@@ -19,6 +19,7 @@ jobs:
           path: component-user-docs
           fetch-depth: 0
           submodules: true
+          token: ${{ secrets.GH_PAT }}
 
       - name: install doxygen
         run: |
