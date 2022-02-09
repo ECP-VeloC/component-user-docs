@@ -46,7 +46,7 @@ echo "Generating Files"
 doxygen Doxyfile
 
 echo "Updating gh-pages branch"
-cd html && git add --all && git commit -m "$1"
+cd html && git add --all && git commit -m "$@"
 cd ..
 
 # TODO: automatically push changes
