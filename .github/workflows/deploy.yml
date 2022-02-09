@@ -27,5 +27,7 @@ jobs:
       - name: deploy
         run: |
           cd component-user-docs
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           ./deploy.sh "`git log --pretty=format:'%h %s' --abbrev-commit -n 1`"
           git push origin gh-pages
