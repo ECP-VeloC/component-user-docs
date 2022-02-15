@@ -65,15 +65,15 @@
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#if 0</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">int</span> <a class="code" href="spath__mpi_8h.html#a1cb065a71c954befde87d8c79ba0d3e2">spath_sendrecv</a>(</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">const</span> <a class="code" href="structspath.html">spath</a>* send_path,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">const</span> spath* send_path,</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">int</span> send_rank,</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="structspath.html">spath</a>* recv_path,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  spath* recv_path,</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">int</span> recv_rank,</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  MPI_Comm comm</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">int</span> <a class="code" href="spath__mpi_8h.html#ac20d3ee83f0c334877d1f431dff5f1d0">spath_bcast</a>(<a class="code" href="structspath.html">spath</a>* path, <span class="keywordtype">int</span> root, MPI_Comm comm);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">int</span> <a class="code" href="spath__mpi_8h.html#ac20d3ee83f0c334877d1f431dff5f1d0">spath_bcast</a>(spath* path, <span class="keywordtype">int</span> root, MPI_Comm comm);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/* enable C++ codes to include this header directly */</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
@@ -82,7 +82,6 @@
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SPATH_MPI_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astructspath_html"><div class="ttname"><a href="structspath.html">spath</a></div><div class="ttdef"><b>Definition:</b> <a href="spath_8h_source.html#l00056">spath.h:56</a></div></div>
 <div class="ttc" id="aspath__mpi_8h_html_a1cb065a71c954befde87d8c79ba0d3e2"><div class="ttname"><a href="spath__mpi_8h.html#a1cb065a71c954befde87d8c79ba0d3e2">spath_sendrecv</a></div><div class="ttdeci">int spath_sendrecv(const spath *send_path, int send_rank, spath *recv_path, int recv_rank, MPI_Comm comm)</div></div>
 <div class="ttc" id="aspath__mpi_8h_html_ac20d3ee83f0c334877d1f431dff5f1d0"><div class="ttname"><a href="spath__mpi_8h.html#ac20d3ee83f0c334877d1f431dff5f1d0">spath_bcast</a></div><div class="ttdeci">int spath_bcast(spath *path, int root, MPI_Comm comm)</div></div>
 <div class="ttc" id="aspath_8h_html"><div class="ttname"><a href="spath_8h.html">spath.h</a></div><div class="ttdoc">This file defines the data structure for a path, which is an double-linked list of elements,...</div></div>

@@ -47,7 +47,8 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a>  </div>
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">kvtree.h File Reference<div class="ingroups"><a class="el" href="group__kvtree.html">KVTree</a></div></div>  </div>
 </div><!--header-->
@@ -67,6 +68,8 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a96dafa1dbe879ae350682d47e16b945a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvtree_8h.html#a96dafa1dbe879ae350682d47e16b945a">kvtree_read_scatter_single</a> (const char *prefix, kvtree *data)</td></tr>
+<tr class="separator:a96dafa1dbe879ae350682d47e16b945a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Allocate and delete hash objects</div></td></tr>
 <tr class="memitem:a1f89b0cce1575de8a7965f5287e8b95d"><td class="memItemLeft" align="right" valign="top">kvtree *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvtree_8h.html#a1f89b0cce1575de8a7965f5287e8b95d">kvtree_new</a> (void)</td></tr>
 <tr class="separator:a1f89b0cce1575de8a7965f5287e8b95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,6 +156,8 @@ Functions</h2></td></tr>
 <tr class="separator:a29e67d7d32b82f7641033cd357bb51c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4f73702e65f1abd1ed6c0bd3bf34a50"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvtree_8h.html#ac4f73702e65f1abd1ed6c0bd3bf34a50">kvtree_read_with_lock</a> (const char *file, kvtree *hash)</td></tr>
 <tr class="separator:ac4f73702e65f1abd1ed6c0bd3bf34a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86929decedc83633e2b74c35ba60f860"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvtree_8h.html#a86929decedc83633e2b74c35ba60f860">kvtree_write_with_lock</a> (const char *file, kvtree *hash)</td></tr>
+<tr class="separator:a86929decedc83633e2b74c35ba60f860"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a018343ba4cacf25073863790a5e3ccb5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvtree_8h.html#a018343ba4cacf25073863790a5e3ccb5">kvtree_lock_open_read</a> (const char *file, int *fd, kvtree *hash)</td></tr>
 <tr class="separator:a018343ba4cacf25073863790a5e3ccb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae969467027c170840aa4993cd9de8426"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvtree_8h.html#ae969467027c170840aa4993cd9de8426">kvtree_write_close_unlock</a> (const char *file, int *fd, const kvtree *hash)</td></tr>
@@ -162,6 +167,8 @@ Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Print hash and elements to stdout for debugging</div></td></tr>
 <tr class="memitem:a37a7dd9b0e8a8d8995fb414d4dbf3af8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvtree_8h.html#a37a7dd9b0e8a8d8995fb414d4dbf3af8">kvtree_print</a> (const kvtree *hash, int indent)</td></tr>
 <tr class="separator:a37a7dd9b0e8a8d8995fb414d4dbf3af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a442a47074a55873cd5c48b92b8441bd8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvtree_8h.html#a442a47074a55873cd5c48b92b8441bd8">kvtree_print_mode</a> (const kvtree *hash, int indent, int mode)</td></tr>
+<tr class="separator:a442a47074a55873cd5c48b92b8441bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a333e8f26a5a2a8d462c712921c043689"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvtree_8h.html#a333e8f26a5a2a8d462c712921c043689">kvtree_log</a> (const kvtree *hash, int log_level, int indent)</td></tr>
 <tr class="separator:a333e8f26a5a2a8d462c712921c043689"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -682,7 +689,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>given a filename and hash, lock the file, open it, and read it into hash, set fd to the opened file descriptor </p>
+<p>given a filename and hash, lock the file, open it, and read it into hash, set fd to the opened file descriptor. Note that this function actually acquires a write lock, not a read lock, allowing you do a read-modify-write before you unlock it. <br  />
+ </p>
 
 </div>
 </div>
@@ -846,6 +854,41 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a442a47074a55873cd5c48b92b8441bd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a442a47074a55873cd5c48b92b8441bd8">&#9670;&nbsp;</a></span>kvtree_print_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kvtree_print_mode </td>
+          <td>(</td>
+          <td class="paramtype">const kvtree *&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>indent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>prints specified hash to stdout for debugging </p>
+
+</div>
+</div>
 <a id="ab3443cba899ef32977da0eeedf97adc2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3443cba899ef32977da0eeedf97adc2">&#9670;&nbsp;</a></span>kvtree_read_fd()</h2>
 
@@ -907,6 +950,34 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>opens specified file and reads in a hash storing its contents in the given hash object </p>
+
+</div>
+</div>
+<a id="a96dafa1dbe879ae350682d47e16b945a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96dafa1dbe879ae350682d47e16b945a">&#9670;&nbsp;</a></span>kvtree_read_scatter_single()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kvtree_read_scatter_single </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>prefix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">kvtree *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1479,6 +1550,35 @@ Functions</h2></td></tr>
 1
   &lt;kvtree_for_rank_1&gt;
 </pre><p>requires exactly one entry for each rank starting at 0 couting up to ranks-1 items in kvtree do not need to be sorted before the call </p>
+
+</div>
+</div>
+<a id="a86929decedc83633e2b74c35ba60f860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86929decedc83633e2b74c35ba60f860">&#9670;&nbsp;</a></span>kvtree_write_with_lock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kvtree_write_with_lock </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">kvtree *&#160;</td>
+          <td class="paramname"><em>hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>given a filename and hash, lock/open/read/close/unlock the file storing its contents in the hash </p>
 
 </div>
 </div>

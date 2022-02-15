@@ -58,30 +58,32 @@
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rankstr__mpi_8h.html#acb9b3bd7193851760d09ed640437b4cc">rankstr_mpi</a>(</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* str, </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  MPI_Comm comm,   </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">int</span> tag1,        </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">int</span> tag2,        </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">int</span>* groups,     </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">int</span>* groupid     </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rankstr__mpi_8h.html#aeb51e5d546f45b29c32bf5e5a39b1fc9">rankstr_mpi_comm_split</a>(</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  MPI_Comm comm,    </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* str,  </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structkvtree__elem__struct.html#a5892a9181e6a332f84d27aecd41dcd12">key</a>,          </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">int</span> tag1,         </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">int</span> tag2,         </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  MPI_Comm* newcomm </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">/* enable C++ codes to include this header directly */</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;} <span class="comment">/* extern &quot;C&quot; */</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define RANKSTR_VERSION &quot;0.1.0&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rankstr__mpi_8h.html#acb9b3bd7193851760d09ed640437b4cc">rankstr_mpi</a>(</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* str, </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  MPI_Comm comm,   </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">int</span> tag1,        </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">int</span> tag2,        </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">int</span>* groups,     </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">int</span>* groupid     </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rankstr__mpi_8h.html#aeb51e5d546f45b29c32bf5e5a39b1fc9">rankstr_mpi_comm_split</a>(</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  MPI_Comm comm,    </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* str,  </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structkvtree__elem__struct.html#a5892a9181e6a332f84d27aecd41dcd12">key</a>,          </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">int</span> tag1,         </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">int</span> tag2,         </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  MPI_Comm* newcomm </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">/* enable C++ codes to include this header directly */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;} <span class="comment">/* extern &quot;C&quot; */</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="arankstr__mpi_8h_html_acb9b3bd7193851760d09ed640437b4cc"><div class="ttname"><a href="rankstr__mpi_8h.html#acb9b3bd7193851760d09ed640437b4cc">rankstr_mpi</a></div><div class="ttdeci">void rankstr_mpi(const char *str, MPI_Comm comm, int tag1, int tag2, int *groups, int *groupid)</div></div>
 <div class="ttc" id="arankstr__mpi_8h_html_aeb51e5d546f45b29c32bf5e5a39b1fc9"><div class="ttname"><a href="rankstr__mpi_8h.html#aeb51e5d546f45b29c32bf5e5a39b1fc9">rankstr_mpi_comm_split</a></div><div class="ttdeci">void rankstr_mpi_comm_split(MPI_Comm comm, const char *str, int key, int tag1, int tag2, MPI_Comm *newcomm)</div></div>

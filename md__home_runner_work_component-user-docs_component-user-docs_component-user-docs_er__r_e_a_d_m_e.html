@@ -46,13 +46,14 @@
 <div class="title">Encode/Rebuild (ER) </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md11"></a>
+<div class="textblock"><p><a href="https://github.com/ECP-VeloC/er/actions/workflows/build-and-test.yml"><object type="image/svg+xml" data="https://github.com/ECP-VeloC/er/actions/workflows/build-and-test.yml/badge.svg" style="pointer-events: none;">er build only</object></a></p>
+<h1><a class="anchor" id="autotoc_md28"></a>
 Overview</h1>
 <p>This module combines the funcitonality of shuffile and redset, which lets both migrate and rebuild files within an MPI job. It is useful for moving and rebuilding data files on distributed storage, e.g., node-local storage, particularly when MPI ranks may be running on different compute nodes than when they originally created their files.</p>
 <p>To encode, one defines a redundancy scheme and then applies the redundancy scheme to a list of files also providing a name for the encoded set. To rebuild, one specifies the name of the encoded set. Additionally, there is a function to remove the encoding information, which is needed when removing a dataset.</p>
 <p>Currently, er assumes the group of processes participating is the same as MPI_COMM_WORLD.</p>
-<p>Usage is documented in <a href="src/er.h">src/er.h</a>.</p>
-<h1><a class="anchor" id="autotoc_md12"></a>
+<p>Usage is documented in <a href="src/er.h">src/er.h</a> and in the <a href="https://ecp-veloc.github.io/component-user-docs/group__er.html">user API</a> docs.</p>
+<h1><a class="anchor" id="autotoc_md29"></a>
 Building</h1>
 <p>To build dependencies: </p><pre class="fragment">git clone git@github.com:ECP-VeloC/KVTree.git   KVTree.git
 git clone git@github.com:ECP-VeloC/rankstr.git  rankstr.git
@@ -96,13 +97,13 @@ make clean
 make
 make install
 cd ..
-</pre><p>To build ER: </p><pre class="fragment">cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=./install -DWITH_KVTREE_PREFIX=`pwd`/install -DWITH_REDSET_PREFIX=`pwd`/install -DWITH_SHUFFILE_PREFIX=`pwd`/install .
+</pre><p>To build ER: </p><pre class="fragment">cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=./install -DWITH_KVTREE_PREFIX=`pwd`/install -DWITH_RANKSTR_PREFIX=`pwd`/install -DWITH_REDSET_PREFIX=`pwd`/install -DWITH_SHUFFILE_PREFIX=`pwd`/install .
 make
-</pre><h1><a class="anchor" id="autotoc_md13"></a>
+</pre><h1><a class="anchor" id="autotoc_md30"></a>
 Testing</h1>
 <p>Some simple test programs exist in the test directory.</p>
 <p>To build a test for the ER API: </p><pre class="fragment">mpicc -g -O0 -o test_er test_er.c -I../install/include -L../install/lib64 -lkvtree -lshuffile -lredset -lrankstr -I../src -L../src -ler
-</pre><h2><a class="anchor" id="autotoc_md14"></a>
+</pre><h2><a class="anchor" id="autotoc_md31"></a>
 Release</h2>
 <p>Copyright (c) 2018, Lawrence Livermore National Security, LLC. Produced at the Lawrence Livermore National Laboratory. <br  />
  Copyright (c) 2018, UChicago Argonne LLC, operator of Argonne National Laboratory.</p>

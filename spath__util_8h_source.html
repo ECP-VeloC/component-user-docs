@@ -57,7 +57,12 @@
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* TODO: should somehowe abort if allocation fails */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="spath__util_8h.html#a785afe67b1f4e2433852bfe08524eea6">spath_malloc</a>(<span class="keywordtype">size_t</span> size, <span class="keyword">const</span> <span class="keywordtype">char</span>* file, <span class="keywordtype">int</span> line);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/* caller really passes in a void**, but we define it as just void* to avoid printing</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * a bunch of warnings */</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="spath__util_8h.html#a106ccef680cf3721fe9c1149802c9a42">spath_free</a>(<span class="keywordtype">void</span>* p);</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aspath__util_8h_html_a106ccef680cf3721fe9c1149802c9a42"><div class="ttname"><a href="spath__util_8h.html#a106ccef680cf3721fe9c1149802c9a42">spath_free</a></div><div class="ttdeci">void spath_free(void *p)</div></div>
 <div class="ttc" id="aspath__util_8h_html_a785afe67b1f4e2433852bfe08524eea6"><div class="ttname"><a href="spath__util_8h.html#a785afe67b1f4e2433852bfe08524eea6">spath_malloc</a></div><div class="ttdeci">void * spath_malloc(size_t size, const char *file, int line)</div></div>
 <!-- HTML footer for doxygen 1.8.15-->
 <!-- start footer part -->

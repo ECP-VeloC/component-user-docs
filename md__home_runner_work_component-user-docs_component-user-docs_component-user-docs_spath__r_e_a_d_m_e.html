@@ -46,13 +46,13 @@
 <div class="title">spath </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a href="https://travis-ci.org/ECP-VeloC/spath"><img src="https://api.travis-ci.org/ECP-VeloC/spath.png?branch=master" alt="Build Status" class="inline"/></a></p>
-<h1><a class="anchor" id="autotoc_md33"></a>
+<div class="textblock"><p><a href="https://github.com/ECP-VeloC/spath/actions/workflows/build-and-test.yml"><object type="image/svg+xml" data="https://github.com/ECP-VeloC/spath/actions/workflows/build-and-test.yml/badge.svg" style="pointer-events: none;">spath build and test</object></a></p>
+<h1><a class="anchor" id="autotoc_md91"></a>
 Overview</h1>
 <p>The spath libary defines a data structure and a number of functions to manipulate paths, including combining, slicing, simplification, computing relative paths, and converting to/from character strings.</p>
 <p>For a quick intro, see <a href="doc/rst/spath.rst">doc/rst/spath.rst</a>.</p>
-<p>For full documentation, refer to <a href="src/spath.h">src/spath.h</a>.</p>
-<h1><a class="anchor" id="autotoc_md34"></a>
+<p>For full documentation, refer to <a href="src/spath.h">src/spath.h</a> and the <a href="https://ecp-veloc.github.io/component-user-docs/group__spath.html">User API docs</a>.</p>
+<h1><a class="anchor" id="autotoc_md92"></a>
 Quickstart</h1>
 <p>spath uses the CMake build system and we recommend out-of-source builds.</p>
 <div class="fragment"><div class="line">git clone git@github.com:ECP-VeloC/spath.git</div>
@@ -68,16 +68,16 @@ Quickstart</h1>
 <ul>
 <li><code>-DCMAKE_INSTALL_PREFIX=[path]</code>: Place to install the spath library</li>
 <li><code>-DCMAKE_BUILD_TYPE=[Debug/Release]</code>: Build with debugging or optimizations</li>
-<li><code>-DMPI</code>: Build with support for MPI movement of kvtree objects</li>
+<li><code>-DMPI=ON</code>: Build with support for MPI movement of spath objects</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md35"></a>
+<h2><a class="anchor" id="autotoc_md93"></a>
 Dependencies</h2>
 <ul>
 <li>C</li>
 <li>MPI (optional)</li>
 <li>CMake, Version 2.8+</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md36"></a>
+<h1><a class="anchor" id="autotoc_md94"></a>
 Release</h1>
 <p>Copyright (c) 2018, Lawrence Livermore National Security, LLC. Produced at the Lawrence Livermore National Laboratory. <br  />
  Copyright (c) 2018, UChicago Argonne LLC, operator of Argonne National Laboratory.</p>

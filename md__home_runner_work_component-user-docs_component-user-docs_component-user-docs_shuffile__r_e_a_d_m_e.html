@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
     <meta name="generator" content="Doxygen 1.8.17"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>ECP-VELOC Components: Overview</title>
+    <title>ECP-VELOC Components: Shuffile</title>
     <!-- <link href="tabs.css" rel="stylesheet" type="text/css"/> -->
     <!-- <script type="text/javascript" src="jquery.js"></script> -->
     <!-- <script type="text/javascript" src="dynsections.js"></script> -->
@@ -43,15 +43,17 @@
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Overview </div>  </div>
+<div class="title">Shuffile </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a href="https://travis-ci.org/ECP-VeloC/shuffile"><img src="https://api.travis-ci.org/ECP-VeloC/shuffile.png?branch=master" alt="Build Status" class="inline"/></a></p>
+<div class="textblock"><p><a href="https://github.com/ECP-VeloC/shuffile/actions/workflows/build-and-test.yml"><object type="image/svg+xml" data="https://github.com/ECP-VeloC/shuffile/actions/workflows/build-and-test.yml/badge.svg" style="pointer-events: none;">build-only</object></a></p>
+<h1><a class="anchor" id="autotoc_md78"></a>
+Overview</h1>
 <p>This module lets one associate a set of files with a process name. Currently, the name is implied to be the rank within MPI_COMM_WORLD. In the event that a set of distributed processes are moved, for example when restarting an MPI job, functions will migrate files from their original locations to the new locations where the processes are running.</p>
-<p>Usage is documented in <a class="el" href="shuffile_8h.html" title="shuffle files between mpi ranks">src/shuffile.h</a>.</p>
-<h1><a class="anchor" id="autotoc_md29"></a>
+<p>Usage is documented in [<a class="el" href="shuffile_8h.html" title="shuffle files between mpi ranks">src/shuffile.h</a>]() and the <a href="https://ecp-veloc.github.io/component-user-docs/group__shuffile.html">User API docs</a>.</p>
+<h1><a class="anchor" id="autotoc_md79"></a>
 Building</h1>
-<p>To build KVTree: </p><pre class="fragment">git clone git@github.com:LLNL/KVTree.git KVTree.git
+<p>To build shuffile, first build the KVTree dependency: </p><pre class="fragment">git clone git@github.com:LLNL/KVTree.git KVTree.git
 
 mkdir build
 mkdir install
@@ -61,13 +63,13 @@ cmake -DCMAKE_INSTALL_PREFIX=../install -DMPI=ON ../KVTree.git
 make clean
 make
 make install
-make test
 </pre><p>To build shuffile: </p><pre class="fragment">cmake -DCMAKE_BUILD_TYPE=Debug -DWITH_KVTREE_PREFIX=`pwd`/install .
-</pre><h1><a class="anchor" id="autotoc_md30"></a>
+make
+</pre><h1><a class="anchor" id="autotoc_md80"></a>
 Testing</h1>
-<p>Some simple test programs exist in the test directory. </p><pre class="fragment">mpicc -g -O0 -o test1 test1.c -I../install/include -L../install/lib64 -lkvtree -I../src -L../src -lshuffile
-</pre><h2><a class="anchor" id="autotoc_md31"></a>
-Release</h2>
+<p>Some simple test programs exist in the test directory that are run by the <code>test</code> target. </p><pre class="fragment">make test
+</pre><h1><a class="anchor" id="autotoc_md81"></a>
+Release</h1>
 <p>Copyright (c) 2018, Lawrence Livermore National Security, LLC. Produced at the Lawrence Livermore National Laboratory. <br  />
  Copyright (c) 2018, UChicago Argonne LLC, operator of Argonne National Laboratory.</p>
 <p>For release details and restrictions, please read the [LICENSE]() and [NOTICE]() files.</p>

@@ -93,6 +93,8 @@ Functions</h2></td></tr>
 <tr class="separator:af26bd59856f7984a7204b0b6300cce5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb45a5a86d398ee7349817196030fee5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shuffile__io_8h.html#afb45a5a86d398ee7349817196030fee5">shuffile_write_pad_n</a> (int n, const char **files, int *fds, char *buf, unsigned long count, unsigned long offset, unsigned long *filesizes)</td></tr>
 <tr class="separator:afb45a5a86d398ee7349817196030fee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab3278b77b577df42b45114cf5d3b6b4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shuffile__io_8h.html#aab3278b77b577df42b45114cf5d3b6b4">shuffile_stat</a> (const char *file, struct stat *statbuf)</td></tr>
+<tr class="separator:aab3278b77b577df42b45114cf5d3b6b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace7af0b7ab007143db61e97457b81964"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shuffile__io_8h.html#ace7af0b7ab007143db61e97457b81964">shuffile_file_size</a> (const char *file)</td></tr>
 <tr class="separator:ace7af0b7ab007143db61e97457b81964"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6fbcfe65901fb7ae0a8a651ecba4820"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shuffile__io_8h.html#ad6fbcfe65901fb7ae0a8a651ecba4820">shuffile_file_exists</a> (const char *file)</td></tr>
@@ -917,6 +919,35 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>remove directory </p>
+
+</div>
+</div>
+<a id="aab3278b77b577df42b45114cf5d3b6b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab3278b77b577df42b45114cf5d3b6b4">&#9670;&nbsp;</a></span>shuffile_stat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int shuffile_stat </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct stat *&#160;</td>
+          <td class="paramname"><em>statbuf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>given a filename, return stat info </p>
 
 </div>
 </div>

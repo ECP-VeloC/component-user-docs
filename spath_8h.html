@@ -70,73 +70,77 @@
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspath__elem__struct.html">spath_elem_struct</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspath.html">spath</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspath__struct.html">spath_struct</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Allocate and delete path objects</div></td></tr>
-<tr class="memitem:a763b335407cf765c7bc77d7f5047c691"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspath.html">spath</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a763b335407cf765c7bc77d7f5047c691">spath_new</a> (void)</td></tr>
+<tr class="memitem:a763b335407cf765c7bc77d7f5047c691"><td class="memItemLeft" align="right" valign="top">spath *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a763b335407cf765c7bc77d7f5047c691">spath_new</a> (void)</td></tr>
 <tr class="separator:a763b335407cf765c7bc77d7f5047c691"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa507f8360db6ae13669852a64bebaabd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspath.html">spath</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#aa507f8360db6ae13669852a64bebaabd">spath_from_str</a> (const char *str)</td></tr>
+<tr class="memitem:aa507f8360db6ae13669852a64bebaabd"><td class="memItemLeft" align="right" valign="top">spath *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#aa507f8360db6ae13669852a64bebaabd">spath_from_str</a> (const char *str)</td></tr>
 <tr class="separator:aa507f8360db6ae13669852a64bebaabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c96e321f317286cd3382094be698b4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspath.html">spath</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a8c96e321f317286cd3382094be698b4c">spath_from_strf</a> (const char *format,...)</td></tr>
+<tr class="memitem:a8c96e321f317286cd3382094be698b4c"><td class="memItemLeft" align="right" valign="top">spath *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a8c96e321f317286cd3382094be698b4c">spath_from_strf</a> (const char *format,...)</td></tr>
 <tr class="separator:a8c96e321f317286cd3382094be698b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adee120a68ae364a87ec1c685fa8f77bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspath.html">spath</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#adee120a68ae364a87ec1c685fa8f77bc">spath_dup</a> (const <a class="el" href="structspath.html">spath</a> *path)</td></tr>
+<tr class="memitem:adee120a68ae364a87ec1c685fa8f77bc"><td class="memItemLeft" align="right" valign="top">spath *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#adee120a68ae364a87ec1c685fa8f77bc">spath_dup</a> (const spath *path)</td></tr>
 <tr class="separator:adee120a68ae364a87ec1c685fa8f77bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e218ae0904f20c0ff78d8fc301a83ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a5e218ae0904f20c0ff78d8fc301a83ba">spath_delete</a> (<a class="el" href="structspath.html">spath</a> **ptr_path)</td></tr>
+<tr class="memitem:a5e218ae0904f20c0ff78d8fc301a83ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a5e218ae0904f20c0ff78d8fc301a83ba">spath_delete</a> (spath **ptr_path)</td></tr>
 <tr class="separator:a5e218ae0904f20c0ff78d8fc301a83ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">get size and string functions</div></td></tr>
-<tr class="memitem:ac0d2db0a109a6899c7272ac9b5e1934f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#ac0d2db0a109a6899c7272ac9b5e1934f">spath_is_null</a> (const <a class="el" href="structspath.html">spath</a> *path)</td></tr>
+<tr class="memitem:ac0d2db0a109a6899c7272ac9b5e1934f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#ac0d2db0a109a6899c7272ac9b5e1934f">spath_is_null</a> (const spath *path)</td></tr>
 <tr class="separator:ac0d2db0a109a6899c7272ac9b5e1934f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a572eb56d4241a42335fbfc5626218c27"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a572eb56d4241a42335fbfc5626218c27">spath_components</a> (const <a class="el" href="structspath.html">spath</a> *path)</td></tr>
+<tr class="memitem:a572eb56d4241a42335fbfc5626218c27"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a572eb56d4241a42335fbfc5626218c27">spath_components</a> (const spath *path)</td></tr>
 <tr class="separator:a572eb56d4241a42335fbfc5626218c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaf5afe88b8a898ee9fb32020e683ab7"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#adaf5afe88b8a898ee9fb32020e683ab7">spath_strlen</a> (const <a class="el" href="structspath.html">spath</a> *path)</td></tr>
+<tr class="memitem:adaf5afe88b8a898ee9fb32020e683ab7"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#adaf5afe88b8a898ee9fb32020e683ab7">spath_strlen</a> (const spath *path)</td></tr>
 <tr class="separator:adaf5afe88b8a898ee9fb32020e683ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51b9208339c36a7873417776845b83f3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a51b9208339c36a7873417776845b83f3">spath_strcpy</a> (char *buf, size_t n, const <a class="el" href="structspath.html">spath</a> *path)</td></tr>
+<tr class="memitem:a51b9208339c36a7873417776845b83f3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a51b9208339c36a7873417776845b83f3">spath_strcpy</a> (char *buf, size_t n, const spath *path)</td></tr>
 <tr class="separator:a51b9208339c36a7873417776845b83f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa349cb4b381186e6ee377257756f53dd"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#aa349cb4b381186e6ee377257756f53dd">spath_strdup</a> (const <a class="el" href="structspath.html">spath</a> *path)</td></tr>
+<tr class="memitem:aa349cb4b381186e6ee377257756f53dd"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#aa349cb4b381186e6ee377257756f53dd">spath_strdup</a> (const spath *path)</td></tr>
 <tr class="separator:aa349cb4b381186e6ee377257756f53dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">insert, append, prepend functions</div></td></tr>
-<tr class="memitem:a3a19d7b22f70bc21bd37a2f2158660f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a3a19d7b22f70bc21bd37a2f2158660f8">spath_insert</a> (<a class="el" href="structspath.html">spath</a> *path1, int offset, const <a class="el" href="structspath.html">spath</a> *ptr_path2)</td></tr>
+<tr class="memitem:a3a19d7b22f70bc21bd37a2f2158660f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a3a19d7b22f70bc21bd37a2f2158660f8">spath_insert</a> (spath *path1, int offset, const spath *ptr_path2)</td></tr>
 <tr class="separator:a3a19d7b22f70bc21bd37a2f2158660f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac311b313d2d6211da1f7bcc328441b17"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#ac311b313d2d6211da1f7bcc328441b17">spath_prepend</a> (<a class="el" href="structspath.html">spath</a> *path1, const <a class="el" href="structspath.html">spath</a> *ptr_path2)</td></tr>
+<tr class="memitem:ac311b313d2d6211da1f7bcc328441b17"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#ac311b313d2d6211da1f7bcc328441b17">spath_prepend</a> (spath *path1, const spath *ptr_path2)</td></tr>
 <tr class="separator:ac311b313d2d6211da1f7bcc328441b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68b5fe9d3b7f32236f0a93cf84c19bcf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a68b5fe9d3b7f32236f0a93cf84c19bcf">spath_append</a> (<a class="el" href="structspath.html">spath</a> *path1, const <a class="el" href="structspath.html">spath</a> *ptr_path2)</td></tr>
+<tr class="memitem:a68b5fe9d3b7f32236f0a93cf84c19bcf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a68b5fe9d3b7f32236f0a93cf84c19bcf">spath_append</a> (spath *path1, const spath *ptr_path2)</td></tr>
 <tr class="separator:a68b5fe9d3b7f32236f0a93cf84c19bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53dd58f2275191ab5ef6bb0935d58bd6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a53dd58f2275191ab5ef6bb0935d58bd6">spath_insert_str</a> (<a class="el" href="structspath.html">spath</a> *path, int offset, const char *str)</td></tr>
+<tr class="memitem:a53dd58f2275191ab5ef6bb0935d58bd6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a53dd58f2275191ab5ef6bb0935d58bd6">spath_insert_str</a> (spath *path, int offset, const char *str)</td></tr>
 <tr class="separator:a53dd58f2275191ab5ef6bb0935d58bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add823abcca7db43ba5b1c4b678c713a6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#add823abcca7db43ba5b1c4b678c713a6">spath_prepend_str</a> (<a class="el" href="structspath.html">spath</a> *path, const char *str)</td></tr>
+<tr class="memitem:add823abcca7db43ba5b1c4b678c713a6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#add823abcca7db43ba5b1c4b678c713a6">spath_prepend_str</a> (spath *path, const char *str)</td></tr>
 <tr class="separator:add823abcca7db43ba5b1c4b678c713a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fed3be001a85ced7612793647ac7a03"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a8fed3be001a85ced7612793647ac7a03">spath_append_str</a> (<a class="el" href="structspath.html">spath</a> *path, const char *str)</td></tr>
+<tr class="memitem:a8fed3be001a85ced7612793647ac7a03"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a8fed3be001a85ced7612793647ac7a03">spath_append_str</a> (spath *path, const char *str)</td></tr>
 <tr class="separator:a8fed3be001a85ced7612793647ac7a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8c95f2a42c2e5accf4e38aefbe0d7fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#ac8c95f2a42c2e5accf4e38aefbe0d7fd">spath_insert_strf</a> (<a class="el" href="structspath.html">spath</a> *path, int offset, const char *format,...)</td></tr>
+<tr class="memitem:ac8c95f2a42c2e5accf4e38aefbe0d7fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#ac8c95f2a42c2e5accf4e38aefbe0d7fd">spath_insert_strf</a> (spath *path, int offset, const char *format,...)</td></tr>
 <tr class="separator:ac8c95f2a42c2e5accf4e38aefbe0d7fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d69247563852c86870810b3f7acf154"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a0d69247563852c86870810b3f7acf154">spath_prepend_strf</a> (<a class="el" href="structspath.html">spath</a> *path, const char *format,...)</td></tr>
+<tr class="memitem:a0d69247563852c86870810b3f7acf154"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a0d69247563852c86870810b3f7acf154">spath_prepend_strf</a> (spath *path, const char *format,...)</td></tr>
 <tr class="separator:a0d69247563852c86870810b3f7acf154"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1bf56a3baf6b1cd8c0508df7f826868"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#aa1bf56a3baf6b1cd8c0508df7f826868">spath_append_strf</a> (<a class="el" href="structspath.html">spath</a> *path, const char *format,...)</td></tr>
+<tr class="memitem:aa1bf56a3baf6b1cd8c0508df7f826868"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#aa1bf56a3baf6b1cd8c0508df7f826868">spath_append_strf</a> (spath *path, const char *format,...)</td></tr>
 <tr class="separator:aa1bf56a3baf6b1cd8c0508df7f826868"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">cut, slice, and subpath functions</div></td></tr>
-<tr class="memitem:ad2cbcc1343c17a584432b506b730301f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#ad2cbcc1343c17a584432b506b730301f">spath_slice</a> (<a class="el" href="structspath.html">spath</a> *path, int offset, int length)</td></tr>
+<tr class="memitem:ad2cbcc1343c17a584432b506b730301f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#ad2cbcc1343c17a584432b506b730301f">spath_slice</a> (spath *path, int offset, int length)</td></tr>
 <tr class="separator:ad2cbcc1343c17a584432b506b730301f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac250467f87863d80f611ff3e04b55ca2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#ac250467f87863d80f611ff3e04b55ca2">spath_dirname</a> (<a class="el" href="structspath.html">spath</a> *path)</td></tr>
+<tr class="memitem:ac250467f87863d80f611ff3e04b55ca2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#ac250467f87863d80f611ff3e04b55ca2">spath_dirname</a> (spath *path)</td></tr>
 <tr class="separator:ac250467f87863d80f611ff3e04b55ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05cedda8dea80b3531a58edda0b5bedc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a05cedda8dea80b3531a58edda0b5bedc">spath_basename</a> (<a class="el" href="structspath.html">spath</a> *path)</td></tr>
+<tr class="memitem:a05cedda8dea80b3531a58edda0b5bedc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a05cedda8dea80b3531a58edda0b5bedc">spath_basename</a> (spath *path)</td></tr>
 <tr class="separator:a05cedda8dea80b3531a58edda0b5bedc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49f81f7a053fa45e6bf877470e9216a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspath.html">spath</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a49f81f7a053fa45e6bf877470e9216a6">spath_sub</a> (<a class="el" href="structspath.html">spath</a> *path, int offset, int length)</td></tr>
+<tr class="memitem:a49f81f7a053fa45e6bf877470e9216a6"><td class="memItemLeft" align="right" valign="top">spath *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a49f81f7a053fa45e6bf877470e9216a6">spath_sub</a> (spath *path, int offset, int length)</td></tr>
 <tr class="separator:a49f81f7a053fa45e6bf877470e9216a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa23c218ff99e1ee1e0343281ff94354d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspath.html">spath</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#aa23c218ff99e1ee1e0343281ff94354d">spath_cut</a> (<a class="el" href="structspath.html">spath</a> *path, int offset)</td></tr>
+<tr class="memitem:aa23c218ff99e1ee1e0343281ff94354d"><td class="memItemLeft" align="right" valign="top">spath *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#aa23c218ff99e1ee1e0343281ff94354d">spath_cut</a> (spath *path, int offset)</td></tr>
 <tr class="separator:aa23c218ff99e1ee1e0343281ff94354d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">simplify and resolve functions</div></td></tr>
-<tr class="memitem:a26f149e8e0bbf7d4a6a59c263ea65fb1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a26f149e8e0bbf7d4a6a59c263ea65fb1">spath_reduce</a> (<a class="el" href="structspath.html">spath</a> *path)</td></tr>
+<tr class="memitem:ad2eacae2501796195ecada9ec7bb9b81"><td class="memItemLeft" align="right" valign="top">spath *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#ad2eacae2501796195ecada9ec7bb9b81">spath_cwd</a> (void)</td></tr>
+<tr class="separator:ad2eacae2501796195ecada9ec7bb9b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71578f21ea1e684bb78955b71c3d7103"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a71578f21ea1e684bb78955b71c3d7103">spath_realpath</a> (spath *path)</td></tr>
+<tr class="separator:a71578f21ea1e684bb78955b71c3d7103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26f149e8e0bbf7d4a6a59c263ea65fb1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a26f149e8e0bbf7d4a6a59c263ea65fb1">spath_reduce</a> (spath *path)</td></tr>
 <tr class="separator:a26f149e8e0bbf7d4a6a59c263ea65fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ac3da775531230942a09ab20578185a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a0ac3da775531230942a09ab20578185a">spath_strdup_reduce_str</a> (const char *str)</td></tr>
 <tr class="separator:a0ac3da775531230942a09ab20578185a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5e3d30be09c2a9342648d7064beaa63"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#aa5e3d30be09c2a9342648d7064beaa63">spath_is_absolute</a> (const <a class="el" href="structspath.html">spath</a> *path)</td></tr>
+<tr class="memitem:aa5e3d30be09c2a9342648d7064beaa63"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#aa5e3d30be09c2a9342648d7064beaa63">spath_is_absolute</a> (const spath *path)</td></tr>
 <tr class="separator:aa5e3d30be09c2a9342648d7064beaa63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3255ea668e4517cb4aa01c009d250561"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a3255ea668e4517cb4aa01c009d250561">spath_is_child</a> (const <a class="el" href="structspath.html">spath</a> *parent, const <a class="el" href="structspath.html">spath</a> *child)</td></tr>
+<tr class="memitem:a3255ea668e4517cb4aa01c009d250561"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#a3255ea668e4517cb4aa01c009d250561">spath_is_child</a> (const spath *parent, const spath *child)</td></tr>
 <tr class="separator:a3255ea668e4517cb4aa01c009d250561"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af66f061f268b9083b3d063df200dfec1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspath.html">spath</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#af66f061f268b9083b3d063df200dfec1">spath_relative</a> (const <a class="el" href="structspath.html">spath</a> *src, const <a class="el" href="structspath.html">spath</a> *dst)</td></tr>
+<tr class="memitem:af66f061f268b9083b3d063df200dfec1"><td class="memItemLeft" align="right" valign="top">spath *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spath_8h.html#af66f061f268b9083b3d063df200dfec1">spath_relative</a> (const spath *src, const spath *dst)</td></tr>
 <tr class="separator:af66f061f268b9083b3d063df200dfec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -149,13 +153,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_append </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">spath *&#160;</td>
           <td class="paramname"><em>path1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">const spath *&#160;</td>
           <td class="paramname"><em>ptr_path2</em>&#160;</td>
         </tr>
         <tr>
@@ -178,7 +182,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_append_str </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">spath *&#160;</td>
           <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
@@ -207,7 +211,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_append_strf </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">spath *&#160;</td>
           <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
@@ -242,7 +246,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_basename </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">spath *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
@@ -261,7 +265,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_components </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">const spath *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
@@ -278,9 +282,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structspath.html">spath</a>* spath_cut </td>
+          <td class="memname">spath* spath_cut </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">spath *&#160;</td>
           <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
@@ -300,6 +304,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad2eacae2501796195ecada9ec7bb9b81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2eacae2501796195ecada9ec7bb9b81">&#9670;&nbsp;</a></span>spath_cwd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">spath* spath_cwd </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>allocate a new path initialized with current working dir </p>
+
+</div>
+</div>
 <a id="a5e218ae0904f20c0ff78d8fc301a83ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e218ae0904f20c0ff78d8fc301a83ba">&#9670;&nbsp;</a></span>spath_delete()</h2>
 
@@ -309,7 +332,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_delete </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structspath.html">spath</a> **&#160;</td>
+          <td class="paramtype">spath **&#160;</td>
           <td class="paramname"><em>ptr_path</em></td><td>)</td>
           <td></td>
         </tr>
@@ -328,7 +351,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_dirname </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">spath *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
@@ -345,9 +368,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structspath.html">spath</a>* spath_dup </td>
+          <td class="memname">spath* spath_dup </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">const spath *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
@@ -364,7 +387,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structspath.html">spath</a>* spath_from_str </td>
+          <td class="memname">spath* spath_from_str </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>str</em></td><td>)</td>
@@ -383,7 +406,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structspath.html">spath</a>* spath_from_strf </td>
+          <td class="memname">spath* spath_from_strf </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>format</em>, </td>
@@ -414,7 +437,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_insert </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">spath *&#160;</td>
           <td class="paramname"><em>path1</em>, </td>
         </tr>
         <tr>
@@ -426,7 +449,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">const spath *&#160;</td>
           <td class="paramname"><em>ptr_path2</em>&#160;</td>
         </tr>
         <tr>
@@ -453,7 +476,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_insert_str </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">spath *&#160;</td>
           <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
@@ -492,7 +515,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_insert_strf </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">spath *&#160;</td>
           <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
@@ -537,7 +560,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_is_absolute </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">const spath *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
@@ -556,13 +579,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_is_child </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">const spath *&#160;</td>
           <td class="paramname"><em>parent</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">const spath *&#160;</td>
           <td class="paramname"><em>child</em>&#160;</td>
         </tr>
         <tr>
@@ -585,7 +608,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_is_null </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">const spath *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
@@ -602,7 +625,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structspath.html">spath</a>* spath_new </td>
+          <td class="memname">spath* spath_new </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -623,13 +646,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_prepend </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">spath *&#160;</td>
           <td class="paramname"><em>path1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">const spath *&#160;</td>
           <td class="paramname"><em>ptr_path2</em>&#160;</td>
         </tr>
         <tr>
@@ -652,7 +675,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_prepend_str </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">spath *&#160;</td>
           <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
@@ -681,7 +704,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_prepend_strf </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">spath *&#160;</td>
           <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
@@ -707,6 +730,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a71578f21ea1e684bb78955b71c3d7103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71578f21ea1e684bb78955b71c3d7103">&#9670;&nbsp;</a></span>spath_realpath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int spath_realpath </td>
+          <td>(</td>
+          <td class="paramtype">spath *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>apply realpath to given path </p>
+
+</div>
+</div>
 <a id="a26f149e8e0bbf7d4a6a59c263ea65fb1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a26f149e8e0bbf7d4a6a59c263ea65fb1">&#9670;&nbsp;</a></span>spath_reduce()</h2>
 
@@ -716,7 +758,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_reduce </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">spath *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
@@ -733,15 +775,15 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structspath.html">spath</a>* spath_relative </td>
+          <td class="memname">spath* spath_relative </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">const spath *&#160;</td>
           <td class="paramname"><em>src</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">const spath *&#160;</td>
           <td class="paramname"><em>dst</em>&#160;</td>
         </tr>
         <tr>
@@ -764,7 +806,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int spath_slice </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">spath *&#160;</td>
           <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
@@ -811,7 +853,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">const spath *&#160;</td>
           <td class="paramname"><em>path</em>&#160;</td>
         </tr>
         <tr>
@@ -834,7 +876,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">char* spath_strdup </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">const spath *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
@@ -872,7 +914,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t spath_strlen </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">const spath *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
@@ -889,9 +931,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structspath.html">spath</a>* spath_sub </td>
+          <td class="memname">spath* spath_sub </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structspath.html">spath</a> *&#160;</td>
+          <td class="paramtype">spath *&#160;</td>
           <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
